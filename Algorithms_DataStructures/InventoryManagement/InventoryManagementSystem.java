@@ -1,4 +1,4 @@
-package Algorithms_DataStructures;
+package Algorithms_DataStructures.InventoryManagement;
 
 import java.util.*;
 
@@ -19,13 +19,13 @@ class Product{
 class Inventory{
     Map<Integer,Product> products = new HashMap<>();
 
-    public void add(int id , String name , double price , int quantity){
+    public void add(int id , String name , double price , int quantity){ //Time complexity:O(1)
         Product newProd = new Product(id, name, price, quantity);
 
         products.put(id,newProd);
         System.out.println("added successfully");
     }
-    public void remove (int id){
+    public void remove (int id){ //Time complexity:O(1)
 
         if(products.containsKey(id)){
             products.remove(id);
@@ -70,7 +70,7 @@ class Inventory{
         }
     }
     
-    public void display(){
+    public void display(){ //timecomplexity : O(n)
         for(Product prod : products.values()){
             System.out.println(prod.productName+" "+prod.price+" "+prod.quantity);
         }
