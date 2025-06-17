@@ -1,5 +1,5 @@
 public class Logger {
-    private static Logger loggerInstance;
+    private static volatile Logger loggerInstance;
 
     private Logger(){
         System.out.println("Logger Constructer");
@@ -7,7 +7,11 @@ public class Logger {
 
     public static Logger getInstance(){
         if(loggerInstance==null){
-            loggerInstance = new Logger();
+            synchronized(Logger.class){
+                if(loggerInstance==null){
+                    loggerInstance = new Logger();
+                }
+            }            
         }
         return loggerInstance;
     }
