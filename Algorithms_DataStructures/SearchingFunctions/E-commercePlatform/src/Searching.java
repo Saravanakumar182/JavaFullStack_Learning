@@ -1,3 +1,4 @@
+
 public class Searching {
     public static Product linearSearch(Product[] products,int id){
         int n = products.length;
