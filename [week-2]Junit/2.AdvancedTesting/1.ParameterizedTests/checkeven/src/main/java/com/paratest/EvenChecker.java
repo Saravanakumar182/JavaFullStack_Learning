@@ -1,4 +1,4 @@
-package com.paratest;
+
 
 public class EvenChecker {
     public boolean isEven(int n){
