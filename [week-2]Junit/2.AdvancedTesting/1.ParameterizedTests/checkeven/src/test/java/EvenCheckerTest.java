@@ -1,7 +1,7 @@
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -17,9 +17,18 @@ public class EvenCheckerTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {1,3,2,7,-1,8,156})
+    @ValueSource(ints = {2,4,8,23456,156})
     void checkEven(int n){
         assertTrue(isEvenChecker.isEven(n), n+"Should be even");
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = {1,123,45,7,-1})
+    void checkNotEven(int n){
+        assertFalse(isEvenChecker.isEven(n), n+"Should not be even");
+    }
+
+
+
     
 }
