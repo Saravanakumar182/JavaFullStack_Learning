@@ -12,7 +12,7 @@ import java.util.Date;
 @Service
 public class JWTService {
 
-    private static final String SECRET_KEY = "6E586A586E3273777A456A2F472B4D6251655468576D5A7134743777217A2543"; // 256-bit hex
+    private static final String SECRET_KEY = ""; // 256-bit hex
     private static final long EXPIRATION_MS = 20 * 60 * 1000; // 20 mins
 
     private Key getSigningKey() {
