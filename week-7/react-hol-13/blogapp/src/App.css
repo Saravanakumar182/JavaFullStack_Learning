@@ -1,0 +1,31 @@
+.app-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-group button {
+  margin: 8px;
+  padding: 10px 16px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-group button:hover {
+  background-color: #2980b9;
+}
+
+.card {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
